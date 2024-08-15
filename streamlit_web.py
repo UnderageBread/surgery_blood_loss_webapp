@@ -67,7 +67,7 @@ if st.sidebar.button("Predict"):
     if prediction == 1:
         st.error("Predicted Class: High-risk  (Class 1)")
     else:
-        st.success("Predicted class: Low risk (Class 0)")
+        st.success("Predicted class: Low-risk (Class 0)")
 
     # Display recommendations
     st.subheader("Recommendations")
