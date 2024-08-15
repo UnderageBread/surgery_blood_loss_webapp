@@ -35,7 +35,7 @@ features = {
 }
 
 # Title
-st.title("Surgical Outcome Prediction")
+st.title("Machine learning model for predicting intraoperative blood loss > 750 ml during burn surgery")
 
 # Sidebar inputs for features
 st.sidebar.header("Input Features")
@@ -62,12 +62,12 @@ if st.sidebar.button("Predict"):
 
     # Display prediction
     st.subheader(f"Prediction using {model_name}")
-    st.write(f"Probability of High Blood Loss (Class 1): **{prediction_proba:.2f}**")
+    st.write(f"Predicted risk of intraoperative blood loss > 750 ml:  **{prediction_proba:.2f}**")
 
     if prediction == 1:
-        st.error("Predicted Class: High Blood Loss (Class 1)")
+        st.error("Predicted Class: High-risk  (Class 1)")
     else:
-        st.success("Predicted Class: Low Blood Loss (Class 0)")
+        st.success("Predicted class: Low risk (Class 0)")
 
     # Display recommendations
     st.subheader("Recommendations")
